@@ -21,6 +21,18 @@
 }
 
 
+@font-face {
+    font-family: 'CharterCTT';
+    src: url('fonts/CharterC-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CharterC-BoldItalic.woff') format('woff'),
+    url('fonts/CharterC-BoldItalic.ttf')  format('truetype'),
+    url('fonts/CharterC-BoldItalic.svg#CharterC-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -34,7 +46,7 @@ body {
 
 h1 {
     background: url('../img/h1_book.png') no-repeat top left;
-    padding-left: 30px;
+    padding-left: 40px;
     font-size: 24px;
     font-weight: bold;
     width: 310px;
@@ -42,8 +54,23 @@ h1 {
 }
 
 
+h2 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 27px;
+    margin: 40px 0 5px 0;
+}
+
+h2.pencil {
+    background: url('../img/pencil.png') no-repeat top left;
+    padding-left: 35px;
+    margin: 40px 0 13px 45px;
+}
+
 .container {
-    width: 970px !important;
+    width: 1000px !important;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .page-container {
@@ -71,10 +98,22 @@ h1 {
     text-transform: uppercase;
     border-radius: 17px;
     padding: 7px 20px 5px;
+    width: 156px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.nav ul li a span {
+    margin-left: 10px;
 }
 
 .nav ul li:first-child a {
     padding: 7px 10px 5px;
+    width: auto;
+}
+
+.nav ul li:first-child a span {
+    margin-left: 0;
 }
 
 .btn-primary {
@@ -82,16 +121,18 @@ h1 {
     background-color: transparent;
 }
 
-.btn-primary.active {
-    color: #fff;
-    background-color: #2e6da4;
-}
+/*.btn-primary:hover, .btn-primary.active, .btn-primary.active:hover {*/
+    /*color: #fff;*/
+    /*background-color: #adafb1;*/
+    /*border-color: #999; *//* #6d6e71*/
+/*}*/
 
 .buy {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 10;
 }
 
 .man {
@@ -114,7 +155,141 @@ h1 {
     left: 50%;
     margin-left: 220px;
     font-weight: bold;
+    width: 260px;
+}
+
+.book-bg {
+    position: absolute;
+    background: url('../img/bg_book.png') center top no-repeat;
+    top: 0;
+    left: 50%;
+    margin-left: -436px;
+    width: 873px;
+    height: 473px;
+    z-index: 2;
+}
+
+.page {
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    min-height: 445px;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.page-left {
+    top: 35px;
+    margin-left: -410px;
+    width: 421px;
+    font-size: 12px;
+}
+
+.page-left-wide {
+
+}
+
+.page-right {
+    margin-left: 40px;
+    width: 340px;
+    font-size: 12px;
+}
+
+.page-wide {
+    top: 35px;
+    margin-left: -400px;
+    width: 800px;
+}
+
+.page-visible {
+    overflow: visible;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 800px;
+    z-index: 5;
+}
+
+.read-wrapper {
+    position: relative;
+    width: 350px;
+    z-index: 5;
+}
+
+.slider-wrapper img {
+    width: 800px;
+    height: auto;
+}
+
+.read p {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.feedback {
+    padding: 27px 61px 0 30px;
+}
+.author {
+    padding: 27px 61px 0 30px;
+    text-align: center;
+}
+
+.author img {
+    display: inline-block;
+    border: 5px solid #fff;
+    margin: 27px auto;
+}
+
+.author .name {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.author .position {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+span.letter {
+    font-size: 42px;
+    line-height: 40px;
+}
+
+p.sign {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+form {
+    margin-left: 45px;
+}
+
+input, textarea {
+    border: 1px solid #e4e5e5;
     width: 250px;
+    margin-bottom: 4px;
+}
+
+input {
+    height: 32px;
+}
+
+textarea {
+    height: 126px;
+}
+
+.btn-container {
+    width: 250px;
+}
+
+.btn-container input {
+    width: 100px;
+    height: 26px;
+    padding-top: 4px;
+    font-size: 12px;
 }
 
 .footer {

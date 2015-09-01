@@ -14,11 +14,17 @@
 }
 
 .jcarousel li {
+    margin: 0;
+    padding: 0;
     float: left;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 988px;
+    width: 800px;
+}
+
+.jcarousel.read li {
+    width: 350px;
 }
 
 /** Carousel Controls **/
@@ -26,19 +32,46 @@
 .jcarousel-control-prev,
 .jcarousel-control-next {
     position: absolute;
-    top: 235px;
+    top: 180px;
     width: 35px;
     height: 107px;
     text-align: center;
     z-index: 1500;
+    font-size: 20px;
+    color: #fff;
+    z-index: 5;
 }
 
 .jcarousel-control-prev {
-    left: 0;
+    left: -60px;
 }
 
 .jcarousel-control-next {
-    right: 0;
+    right: -60px;
+}
+
+a.read-prev {
+    left: -500px;
+    top: 160px;
+}
+
+a.read-next {
+    right: -70px;
+    top: 160px;
+}
+
+a.read-prev:hover {
+    text-decoration: none;
+}
+
+a.read-next:hover {
+    text-decoration: none;
+}
+
+
+a.jcarousel-control-prev:hover
+a.jcarousel-control-next:hover {
+    text-decoration: none;
 }
 
 .jcarousel-control-prev:hover span,

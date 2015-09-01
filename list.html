@@ -2,9 +2,10 @@
 <html>
 <head lang="ru">
     <meta charset="UTF-8">
-    <title>Анкор Книга - Главная</title>
+    <title>Анкор Книга - Полистать</title>
     <link href="bundles/bootstrap3/css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="bundles/public/css/app.css" rel="stylesheet" media="screen">
+    <link href="bundles/public/css/jcarousel.css" rel="stylesheet" media="screen">
 </head>
 <body>
     <div class="container">
@@ -15,16 +16,21 @@
     </div>
     <div class="page-container">
         <div class="container">
-            <div class="page-main relative">
-                <img class="man" src="bundles/public/img/man.png">
-                <img class="book" src="bundles/public/img/book.png">
-                <div class="about">К 25-летнему юбилею АНКОРа<br>
-                    в издательстве «Манн, Иванов<br>
-                    и Фербер» вышла в свет новая книга<br>
-                    Татьяны Баскиной «Всемирная<br>
-                    история кадровой индустрии».<br>
-                    Книга рассчитана на широкую<br>
-                    читательскую аудиторию.
+            <div class="page-about relative">
+                <div class="book-bg"></div>
+                <div class="page page-wide page-visible">
+                    <div class="slider-wrapper">
+                        <div class="jcarousel">
+                            <ul>
+                                <li><img src="bundles/public/img/book/33-34.png"></li>
+                                <li><img src="bundles/public/img/book/37-38.png"></li>
+                                <li><img src="bundles/public/img/book/111-112.png"></li>
+                                <li><img src="bundles/public/img/book/123-124.png"></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="jcarousel-control-prev slider-prev"><span class="glyphicon glyphicon-triangle-left"></span></a>
+                        <a href="#" class="jcarousel-control-next slider-next"><span class="glyphicon glyphicon-triangle-right"></span></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,10 +38,10 @@
     <div class="container">
         <div class="nav">
             <ul>
-                <li><a class="btn btn-primary active" href="index.html"><span class="glyphicon glyphicon-triangle-top"></span></a></li>
+                <li><a class="btn btn-primary" href="index.html"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
                 <li><a class="btn btn-primary" href="about.html">Об авторе <span class="glyphicon glyphicon-triangle-right"></span></a></li>
                 <li><a class="btn btn-primary" href="book.html">О книге <span class="glyphicon glyphicon-triangle-right"></span></a></li>
-                <li><a class="btn btn-primary" href="list.html">Полистать <span class="glyphicon glyphicon-triangle-right"></span></a></li>
+                <li><a class="btn btn-primary active" href="list.html">Полистать <span class="glyphicon glyphicon-triangle-top"></span></a></li>
                 <li><a class="btn btn-primary" href="read.html">Почитать <span class="glyphicon glyphicon-triangle-right"></span></a></li>
             </ul>
         </div>
@@ -45,5 +51,8 @@
         </div>
 
     </div>
+    <script type="text/javascript" src="bundles/jquery/jquery.js"></script>
+    <script type="text/javascript" src="bundles/jcarousel/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="bundles/public/js/app.js"></script>
 </body>
 </html>
