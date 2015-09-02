@@ -105,6 +105,7 @@ h2.pencil {
 
 .nav ul li a span {
     margin-left: 10px;
+    font-size: 12px;
 }
 
 .nav ul li:first-child a {
@@ -213,7 +214,7 @@ h2.pencil {
 
 .read-wrapper {
     position: relative;
-    width: 350px;
+    width: 330px;
     z-index: 5;
 }
 
