@@ -154,6 +154,20 @@ h2.pencil {
     background: linear-gradient(#d1d2d4, #aeb0b2);
 }
 
+.btn-primary {
+    border-color: #b1e2fa;
+    background-image: -webkit-linear-gradient(top, #b1e2fa 0%, #40c2f3 100%);
+    background-image:      -o-linear-gradient(top, #b1e2fa 0%, #40c2f3 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#b1e2fa), to(#40c2f3));
+    background-image:         linear-gradient(to bottom, #b1e2fa 0%, #40c2f3 100%);
+}
+
+.btn-primary:focus, .btn-primary:active, .btn-primary:hover {
+    border-color: #b1e2fa;
+    color: #818285;
+}
+
+
 .buy {
     display: block;
     position: absolute;
