@@ -95,10 +95,12 @@ h2.pencil {
 }
 
 .nav ul li a {
+    height: 34px;
     text-transform: uppercase;
     border-radius: 17px;
-    padding: 6px 20px 5px;
+    padding: 9px 20px 5px;
     width: 156px;
+    line-height: 14px;
     font-weight: bold;
     display: inline-block;
 }
@@ -109,7 +111,7 @@ h2.pencil {
 }
 
 .nav ul li:first-child a {
-    padding: 7px 10px 5px;
+    padding: 9px 10px 5px;
     width: auto;
     background-color: #fff;
 }
