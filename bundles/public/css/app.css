@@ -120,16 +120,15 @@ h2.pencil {
     margin-left: 0;
 }
 
-.btn-primary {
+.nav ul li a {
     color: #00aeef;
     background-color: #fff;
     position: relative;
     border: 1px solid transparent;
-    border-radius: 17px;
     background-clip: padding-box;
 }
 
-.btn-primary:after {
+.nav ul li a:after {
     position: absolute;
     top: -1px; bottom: -1px;
     left: -1px; right: -1px;
@@ -142,13 +141,13 @@ h2.pencil {
     border-radius: 17px;
 }
 
-.btn-primary:hover, .btn-primary.active, .btn-primary:active, .btn-primary:focus, .btn-primary.active:hover {
+.nav ul li a:hover, .nav ul li a.active, .nav ul li a:active, .nav ul li a:focus, .nav ul li a.active:hover {
     color: #818285;
     background-color: #fff;
     border: 1px solid transparent;
     box-shadow: none;
 }
-.btn-primary:hover:after, .btn-primary.active:after, .btn-primary:active:after, .btn-primary:focus:after, .btn-primary.active:hover:after {
+.nav ul li a:hover:after, .nav ul li a.active:after, .nav ul li a:active:after, .nav ul li a:focus:after, .nav ul li a.active:hover:after {
     background: -webkit-linear-gradient(top, #d1d2d4, #aeb0b2);
     background: -moz-linear-gradient(top, #d1d2d4, #aeb0b2);
     background: -o-linear-gradient(top, #d1d2d4, #aeb0b2);
