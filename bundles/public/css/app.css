@@ -260,6 +260,11 @@ h2.pencil {
     width: 410px;
 }
 
+.page-left img {
+    width: 400px;
+    height: auto;
+}
+
 .slider-wrapper img {
     width: 800px;
     height: auto;
