@@ -253,9 +253,11 @@ h2.pencil {
 }
 
 .read-wrapper {
-    position: relative;
     width: 330px;
-    z-index: 5;
+}
+
+.book-wrapper {
+    width: 410px;
 }
 
 .slider-wrapper img {
