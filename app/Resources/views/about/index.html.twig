@@ -1,0 +1,14 @@
+<div class="page-about relative">
+    <div class="book-bg"></div>
+    <div class="page page-left">
+        <div class="author">
+            <img src="{{ author.photo_value.extra.main.path }}">
+            <div class="name">{{ author.name }}</div>
+            <div class="position">{{ author.position }}</div>
+        </div>
+
+    </div>
+    <div class="page page-right">
+        {{ author.content }}
+    </div>
+</div>

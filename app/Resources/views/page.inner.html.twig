@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>{{ render('Fuga:Public:Common:block', {name: 'h1'}) }} - {{ title }}</title>
+    <link href="{{ prj_ref }}/bundles/bootstrap3/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="{{ prj_ref }}/bundles/public/css/app.css?2105090701" rel="stylesheet" media="screen">
+    <link href="{{ prj_ref }}/bundles/public/css/jcarousel.css?2105090701" rel="stylesheet" media="screen">
+</head>
+<body>
+<div class="container">
+    <div class="relative">
+        <a class="buy" target="_blank" href="http://www.mann-ivanov-ferber.ru/books/vsemirnaja-istorija-kadrovoj-industrii/" title="Купить книгу"><img src="bundles/public/img/buy.png"></a>
+    </div>
+    <h1>{{ render('Fuga:Public:Common:block', {name: 'h1'}) }}</h1>
+</div>
+<div class="page-container">
+    <div class="container">
+        {{ maincontent }}
+    </div>
+</div>
+<div class="container">
+    <div class="nav">
+        <ul>
+            <li><a class="btn" href="{{ path('public_page') }}"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
+            {% for menuitem in links %}
+                <li><a class="btn{% if curnode.id == menuitem.id %} active{% endif %}" href="{{ menuitem.ref }}">{{ menuitem.title }} <span class="glyphicon glyphicon-triangle-{% if curnode.id == menuitem.id %}top{% else %}right{% endif %}"></span></a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="row footer">
+        <div class="col-xs-6 text-center"><a href="https://ancor.ru" target="_blank"><img src="{{ prj_ref }}/bundles/public/img/logo_ancor.png"></a></div>
+        <div class="col-xs-6 text-center"><a href="http://www.mann-ivanov-ferber.ru/books/vsemirnaja-istorija-kadrovoj-industrii/" target="_blank"><img src="{{ prj_ref }}/bundles/public/img/logo_mif.png"></a></div>
+    </div>
+
+</div>
+<script type="text/javascript" src="{{ prj_ref }}/bundles/jquery/jquery.js"></script>
+<script type="text/javascript" src="{{ prj_ref }}/bundles/jcarousel/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="{{ prj_ref }}/bundles/public/js/app.js?2015090701"></script>
+</body>
+</html>

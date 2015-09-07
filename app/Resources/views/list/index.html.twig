@@ -1,0 +1,16 @@
+<div class="page-about relative">
+    <div class="book-bg"></div>
+    <div class="page page-wide page-visible">
+        <div class="slider-wrapper">
+            <div class="jcarousel">
+                <ul>
+                    {% for item in scans %}
+                    <li><img src="{{ item.image_value.value }}" alt="{{ item.name }}"></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <a href="#" class="jcarousel-control-prev slider-prev"><span class="glyphicon glyphicon-triangle-left"></span></a>
+            <a href="#" class="jcarousel-control-next slider-next"><span class="glyphicon glyphicon-triangle-right"></span></a>
+        </div>
+    </div>
+</div>

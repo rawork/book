@@ -1,0 +1,39 @@
+<div class="page-about relative">
+    <div class="book-bg"></div>
+    <div class="page page-left page-visible">
+        <div class="slider-wrapper book-wrapper">
+            <div class="jcarousel book-carousel">
+                <ul>
+                    {% for item in feedback %}
+                    <li>
+                        <div class="feedback">
+                            <p>{{ item.feedback }}</p>
+                            <p class="sign">{{ item.name }}, {{ item.position }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <a href="#" class="jcarousel-control-prev book-prev"><span class="glyphicon glyphicon-triangle-left"></span></a>
+            <a href="#" class="jcarousel-control-next book-next"><span class="glyphicon glyphicon-triangle-right"></span></a>
+        </div>
+    </div>
+    <div class="page page-right">
+        <h2 class="pencil">Напишите свой отзыв о книге</h2>
+        <form method="post">
+            <div class="field-container field-person">
+                <input type="text" name="name" placeholder="Введите Ваше имя и должность">
+            </div>
+            <div class="field-container field-email">
+                <input type="text" name="email" placeholder="Введите Ваше e-mail">
+            </div>
+            <div>
+                <textarea name="message"></textarea>
+            </div>
+            <div class="btn-container text-center">
+                <input type="submit" class="btn btn-primary" value="Отправить">
+                <input type="reset" class="btn btn-default" value="Очистить">
+            </div>
+        </form>
+    </div>
+</div>

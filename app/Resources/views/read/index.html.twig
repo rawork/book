@@ -1,0 +1,22 @@
+<div class="page-about relative">
+    <div class="book-bg"></div>
+    <div class="page page-left">
+        <img src="{{ prj_ref }}/bundles/public/img/book/content.png">
+    </div>
+    <div class="page page-right page-visible">
+        <div class="slider-wrapper read-wrapper">
+            <div class="jcarousel read">
+                <ul>
+                    {% for quotation in quotations %}
+                    <li>
+                        <h2>{{ quotation.title }}</h2>
+                        <p>{{ quotation.text }}</p>
+                    </li>
+                    {%  endfor %}
+                </ul>
+            </div>
+            <a href="#" class="jcarousel-control-prev read-prev"><span class="glyphicon glyphicon-triangle-left"></span></a>
+            <a href="#" class="jcarousel-control-next read-next"><span class="glyphicon glyphicon-triangle-right"></span></a>
+        </div>
+    </div>
+</div>
