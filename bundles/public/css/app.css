@@ -287,6 +287,8 @@ h2.pencil {
     display: inline-block;
     border: 5px solid #fff;
     margin: 27px auto;
+    width: auto;
+    max-width: 181px;
 }
 
 .author .name {
