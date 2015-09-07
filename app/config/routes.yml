@@ -168,6 +168,10 @@ admin_cache_clear:
   path: /admin/cache/clear
   defaults: { _controller: 'Fuga:Admin:Cache:clear' }
 
+book_feedback_add:
+  path: /ajax/book/feedback/add
+  defaults: { _controller: 'Fuga:Public:Book:add'}
+
 public_page:
   path: /{node}
   defaults: { _controller: 'Fuga:Public:Common:index', node: '', action: '' }

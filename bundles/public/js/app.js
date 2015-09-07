@@ -1,5 +1,27 @@
 (function($) {
     $(function() {
+
+        $(document).on('submit', 'form', function(e){
+            e.preventDefault();
+
+            var that = $(this);
+
+            var rawData = that.serializeArray();
+            var readyData = {};
+            for (i in rawData){
+                readyData[rawData[i].name] = rawData[i].value;
+            }
+
+            $.post(that.attr('action'), readyData,
+                function(data){
+                    if (data.content) {
+                        alert(data.content);
+                        that.trigger('reset');
+                    }
+                }, "json");
+            return false;
+        });
+
         $('.jcarousel').jcarousel({
             wrap: 'both'
         });

@@ -16,13 +16,6 @@ class User {
 		'title' => 'Список пользователей',
 		'order_by' => 'lastname,name,login',
 		'fieldset' => array (
-			'avatar' => array (
-				'name' => 'avatar',
-				'title' => 'Аватар',
-				'type' => 'image',
-				'width' => '10%',
-				'sizes' => 'main|256x256xadaptive',
-			),
 			'login' => array (
 				'name' => 'login',
 				'title' => 'Логин',
@@ -76,55 +69,6 @@ class User {
 				'l_field' => 'title',
 				'width' => '15%',
 				'search' => true,
-			),
-			'nickname' => array (
-				'name' => 'nickname',
-				'title' => 'Псевдоним',
-				'type' => 'string',
-				'width' => '10%',
-				'search' => true,
-			),
-			'role_id' => array (
-				'name' => 'role_id',
-				'title' => 'Профессия',
-				'type' => 'select',
-				'l_table' => 'pirate_prof',
-				'l_field' => 'name',
-				'width' => '10%',
-				'search' => true
-			),
-			'ship_id' => array (
-				'name' => 'ship_id',
-				'title' => 'Корабль',
-				'type' => 'select',
-				'l_table' => 'crew_ship',
-				'l_field' => 'name',
-				'width' => '10%',
-				'search' => true
-			),
-			'likes' => array (
-				'name' => 'likes',
-				'title' => 'Лайки',
-				'type' => 'number',
-				'width' => '5%',
-			),
-			'purse' => array (
-				'name' => 'purse',
-				'title' => 'Кошелек',
-				'type' => 'number',
-				'width' => '5%',
-			),
-			'is_over' => array (
-				'name' => 'is_over',
-				'title' => 'Проиграл',
-				'type' => 'checkbox',
-				'width' => '5%',
-				'group_update' => true
-			),
-			'is_tested' => array (
-				'name' => 'is_tested',
-				'title' => 'Прошел тест',
-				'type' => 'checkbox',
 			),
 			'is_admin' => array (
 				'name' => 'is_admin',

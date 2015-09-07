@@ -20,7 +20,7 @@
     </div>
     <div class="page page-right">
         <h2 class="pencil">Напишите свой отзыв о книге</h2>
-        <form method="post">
+        <form method="post" action="{{ path('book_feedback_add') }}">
             <div class="field-container field-person">
                 <input type="text" name="name" placeholder="Введите Ваше имя и должность">
             </div>
@@ -28,7 +28,7 @@
                 <input type="text" name="email" placeholder="Введите Ваше e-mail">
             </div>
             <div>
-                <textarea name="message"></textarea>
+                <textarea name="message" placeholder="Ваше сообщение"></textarea>
             </div>
             <div class="btn-container text-center">
                 <input type="submit" class="btn btn-primary" value="Отправить">
