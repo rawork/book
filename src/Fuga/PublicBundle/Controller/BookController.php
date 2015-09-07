@@ -21,7 +21,7 @@ class BookController extends PublicController
 
 	public function addAction()
 	{
-//		if ($this->isXmlHttpRequest()) {
+		if ($this->isXmlHttpRequest()) {
 
 			$data = array(
 				'name' => $this->get('request')->request->get('name', ''),
@@ -45,9 +45,9 @@ class BookController extends PublicController
 			));
 
 			return $response;
-//		}
+		}
 
-//		return $this->redirect($this->generateUrl('public_page'));
+		return $this->redirect($this->generateUrl('public_page'));
 	}
 	
 }
