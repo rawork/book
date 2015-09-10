@@ -25,7 +25,7 @@ class BookController extends PublicController
 
 			$data = array(
 				'name' => $this->get('request')->request->get('name', ''),
-				'email' => $this->get('request')->request->get('position', ''),
+				'email' => $this->get('request')->request->get('email', ''),
 				'position' => '',
 				'feedback' => $this->get('request')->request->get('message'),
 				'created' => date('Y-m-d H-i:s'),
@@ -37,6 +37,19 @@ class BookController extends PublicController
 			$this->get('container')->addItem(
 				'book_feedback',
 				$data
+			);
+
+			$text = 'Новый отзыв на сайте '.$_SERVER['SERVER_NAME']."\n";
+			$text .= '------------------------------------------'."\n";
+			$text .= 'Имя: '.$data['name']."\n";
+			$text .= 'E-mail: '.$data['email']."\n";
+			$text .= 'E-mail: '.$data['feedback']."\n\n";
+			$text .= 'Сообщение сгенерировано автоматически.'."\n";
+
+			$this->get('mailer')->send(
+				'Новый отзыв. Сайт '.$_SERVER['SERVER_NAME'],
+				nl2br($text),
+				ADMIN_EMAIL
 			);
 
 			$response = new JsonResponse();
